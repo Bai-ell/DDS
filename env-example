@@ -1,11 +1,17 @@
+#Основные
 DEBUG=True
 SECRET_KEY=secretkeyexample
 IN_DOCKER =False
 
 
+#Настройки для создания к БД
 POSTGRES_DB=dbexample
 POSTGRES_USER=userexample
 POSTGRES_PASSWORD=passwordexample
+
+
+
+#Настройки для подключения к БД
 DB_HOST=hostexample
 DB_PORT=5432
 DB_NAME=dbnameexample
