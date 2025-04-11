@@ -1,0 +1,10 @@
+DEBUG=True
+SECRET_KEY=yoursecretkey
+IN_DOCKER =False
+DB_NAME=yourdb
+DB_USER=youruser
+DB_PASSWORD=yourpassword
+DB_HOST=db
+DB_PORT=5432
+POSTGRES_PASSWORD=yourpassword
+
