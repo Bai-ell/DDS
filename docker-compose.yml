@@ -2,12 +2,11 @@ services:
   db:
     image: postgres:15
     environment:
-      POSTGRES_DB: dds_db
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: 1
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
     volumes:
       - postgres_data:/var/lib/postgresql/data
-
     ports:
       - "5433:5432"
 
@@ -18,25 +17,17 @@ services:
       - ./staticfiles:/app/staticfiles
     depends_on:
       - db
-
     ports:
       - "8000:8000"
-
     environment:
       - IN_DOCKER=True
-      - DB_HOST=db                
-      - DB_PORT=5432             
-      - DB_NAME=dds_db            
-      - DB_USER=postgres          
-      - DB_PASSWORD=1 
-
-      - DJANGO_SUPERUSER_USERNAME=admin
-      - DJANGO_SUPERUSER_EMAIL=admin@gmail.com
-      - DJANGO_SUPERUSER_PASSWORD=123
-
-    
-    
-
+      - DB_HOST=${DB_HOST}
+      - DB_PORT=${DB_PORT}
+      - DB_NAME=${DB_NAME}
+      - DB_USER=${DB_USER}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - DJANGO_SUPERUSER_USERNAME=${DJANGO_SUPERUSER_USERNAME}
+      - DJANGO_SUPERUSER_EMAIL=${DJANGO_SUPERUSER_EMAIL}
+      - DJANGO_SUPERUSER_PASSWORD=${DJANGO_SUPERUSER_PASSWORD}
 volumes:
   postgres_data:
-
