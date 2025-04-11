@@ -1,0 +1,56 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Django SQLite database
+*.sqlite3
+
+# Django static/media
+/staticfiles/
+/media/
+
+# Local env files
+.env
+.env.*
+
+# Virtual environment
+venv/
+ENV/
+env/
+
+# VSCode
+.vscode/
+
+# macOS system files
+.DS_Store
+
+# Python virtualenv metadata
+pip-wheel-metadata/
+*.egg-info/
+*.egg
+
+# Docker stuff
+*.log
+*.pid
+*.sock
+
+# Pytest cache
+.pytest_cache/
+
+# Migrations (optional — если они генерируются автоматически)
+# */migrations/*.py
+# */migrations/*.pyc
+
+# Coverage
+htmlcov/
+.coverage
+coverage.xml
+
+# MyPy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Node/npm (если будешь тянуть фронт)
+node_modules/
