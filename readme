@@ -65,14 +65,16 @@ PostgreSQL (локально или в контейнере)
 1. Клонируем репозиторий и переходим в папку:
 
             git clone https://github.com/Bai-ell/DDS.git
-            cd DDS
+            
 
-2. Запускаем контейнеры:
+
+2. Создаем фал .env по env-example
+
+
+
+3. Запускаем контейнеры:
             docker-compose up -d --build
 
-3. Применяем миграции базы данных в контейнере:
-            docker-compose exec web python manage.py migrate
-            
 
 
 
